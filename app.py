@@ -42,6 +42,7 @@ def t2i(text, batch_size=1):
     # convert response in json format
     response = json.loads(r.content)
     return response
+
 # Base64 decoding and  convert
 def stringToImage(base64_string, mode='RGBA'):
     imgdata = base64.b64decode(str(base64_string))
