@@ -9,6 +9,13 @@ from PIL import Image
 
 OPENAI_API_KEY = "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"
 KAKAO_API_KEY = "aae47d1d4531de86c0547401b169f52c"
+# certification of openai API key
+openai.api_key = OPENAI_API_KEY
+# create Karlo api instance
+karlo = Karlo(service_key = KAKAO_API_KEY)
+
+# select model GPT 3.5 turbo
+model = "gpt-3.5-turbo"
 
 st.title("smart painter")
 
@@ -16,15 +23,6 @@ with st.form("form"):
     query = st.text_input("Input")
     size = st.selectbox("Size", ["1024x1024","512x512","256x256"])
     submit = st.form_submit_button("Submit")
-
-# certification of openai API key
-openai.api_key = OPENAI_API_KEY
-
-# create Karlo api instance
-karlo = Karlo(service_key = KAKAO_API_KEY)
-
-# select model GPT 3.5 turbo
-model = "gpt-3.5-turbo"
 
 # generate image using Karlo
 def t2i(text, batch_size=1):
