@@ -12,7 +12,7 @@ KAKAO_API_KEY = "aae47d1d4531de86c0547401b169f52c"
 # certification of openai API key
 openai.api_key = OPENAI_API_KEY
 # create Karlo api instance
-#karlo = Karlo(service_key = KAKAO_API_KEY)
+karlo = Karlo(service_key = KAKAO_API_KEY)
 
 # select model GPT 3.5 turbo
 model = "gpt-3.5-turbo"
