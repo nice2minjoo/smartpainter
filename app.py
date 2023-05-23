@@ -12,7 +12,7 @@ KAKAO_API_KEY = "aae47d1d4531de86c0547401b169f52c"
 # certification of openai API key
 openai.api_key = OPENAI_API_KEY
 # create Karlo api instance
-karlo = Karlo(service_key = KAKAO_API_KEY)
+#karlo = Karlo(service_key = KAKAO_API_KEY)
 
 # select model GPT 3.5 turbo
 model = "gpt-3.5-turbo"
@@ -84,8 +84,8 @@ if submit and query:
     st.write(answer)
 
     with st.spinner("Waiting for Karlo..."):
-      response = t2i(answer, 1)
-      result = stringToImage(response.get("images")[0].get("image"), mode='RGB')
+        response = t2i(answer, 1)
+        result = stringToImage(response.get("images")[0].get("image"), mode='RGB')
 
     if size == "1024x1024":
         user_size = 1024
