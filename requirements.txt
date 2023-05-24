@@ -1,2 +1,4 @@
+pip3 install streamlit openai
+
 openai
 streamlit
