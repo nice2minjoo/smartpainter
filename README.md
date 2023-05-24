@@ -1,2 +1,2 @@
-# streamlit-test
-streamlit-test
+# smart painter
+smart painter
