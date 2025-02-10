@@ -23,7 +23,7 @@ if submit and user_input:
     ]
     
     with st.spinner("Waiting for ChatGPT..."):
-        gpt_response = openai.ChatCompletion.create(
+        gpt_response = openai.completions.create(
             model = "gpt-3.5-turbo",
             messages = gpt_prompt
         )
@@ -37,7 +37,7 @@ if submit and user_input:
         st.write(prompt)
         
         with st.spinner("Waiting for DALL-E..."):
-            dalle_response = openai.Image.create(
+            dalle_response = openai.images.generate(
                 prompt = prompt,
                 size = user_size
             )
